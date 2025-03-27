@@ -1,0 +1,245 @@
+{% extends 'base.html' %}
+
+{% block title %}IA en Replit - La revolución de la inteligencia artificial{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="{{ url_for('static', filename='images/replit-ai.svg') }}" alt="Replit AI" width="60" class="me-3">
+                    <h1 class="display-4 fw-bold mb-0">Inteligencia Artificial en Replit</h1>
+                </div>
+                <p class="lead mb-4">Descubre las poderosas herramientas de IA que Replit ofrece para mejorar tu experiencia de programación y desarrollo web.</p>
+                
+                <div class="mb-4">
+                    <div class="tech-badge replit mb-2"><img src="{{ url_for('static', filename='images/replit-logo.svg') }}" alt="Replit" width="18"> Replit</div>
+                    <div class="tech-badge ai mb-2"><i class="fas fa-brain"></i> Claude AI</div>
+                    <div class="tech-badge python mb-2"><i class="fab fa-python"></i> Python</div>
+                    <div class="tech-badge github mb-2"><i class="fab fa-github"></i> GitHub</div>
+                </div>
+                
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="{{ url_for('claude') }}" class="btn btn-primary btn-lg px-4 me-md-2">
+                        <i class="fas fa-brain me-2"></i> Claude Sonnet 3.5
+                    </a>
+                    <a href="{{ url_for('asistente') }}" class="btn btn-outline-secondary btn-lg px-4">
+                        <i class="fas fa-robot me-2"></i> Asistente de Replit
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-4 mt-lg-0 text-center">
+                <div class="position-relative">
+                    <img src="{{ url_for('static', filename='images/replit-blocks.svg') }}" alt="Replit Logo" width="100" class="img-fluid animated-icon mb-4">
+                    <img src="{{ url_for('static', filename='images/replit-ai.svg') }}" alt="Replit IA" width="300" class="img-fluid animated-icon mb-4">
+                    
+                    <div class="mt-4">
+                        <img src="{{ url_for('static', filename='images/language-icons.svg') }}" alt="Lenguajes de Programación" class="img-fluid" style="max-width: 360px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-lg-12">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fas fa-user-circle fs-2 me-3 text-primary"></i>
+                    <h3 class="card-title mb-0">Acerca del Autor</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p class="card-text">Esta aplicación web y la herramienta QRGB fueron desarrolladas por <strong>Ibar Federico Anderson, Ph.D., Master, Diseñador Industrial</strong>, con la asistencia de la IA de Replit.</p>
+                        <p>El Dr. Anderson es un investigador y desarrollador que ha utilizado las herramientas de inteligencia artificial de Replit para crear una solución innovadora de códigos QR a color. El código fuente de la aplicación QRGB está disponible para ser ejecutado localmente en Visual Studio Code con Python y Kivy.</p>
+                        <div class="mt-3">
+                            <a href="https://scholar.google.com/citations?user=mXD4RFUAAAAJ&hl=en" class="btn btn-sm btn-outline-primary me-2" target="_blank">Google Scholar</a>
+                            <a href="https://orcid.org/0000-0002-9732-3660" class="btn btn-sm btn-outline-primary me-2" target="_blank">ORCID</a>
+                            <a href="https://www.researchgate.net/profile/Ibar-Anderson" class="btn btn-sm btn-outline-primary me-2" target="_blank">ResearchGate</a>
+                            <a href="https://github.com/ibarfedericoanderson" class="btn btn-sm btn-primary" target="_blank"><i class="fab fa-github me-1"></i>GitHub</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="text-center p-3 rounded" style="background-color: #f8f9fa;">
+                            <h5 class="mb-3">Aplicación QRGB</h5>
+                            <p>Genera códigos QR personalizados con datos ocultos en las capas RGB</p>
+                            <div class="d-grid gap-2">
+                                <a href="{{ url_for('codigo') }}" class="btn btn-primary mt-2">Ver Código y Descargar</a>
+                                <a href="{{ url_for('version_web') }}" class="btn btn-outline-success mt-2">Versión GitHub Pages</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="my-5">
+
+<div class="row gx-5 mb-5">
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+                <div class="icon-card-header d-flex align-items-center mb-3">
+                    <i class="fas fa-robot fs-2 me-3 text-primary"></i>
+                    <h3 class="card-title mb-0">Claude Sonnet 3.5</h3>
+                </div>
+                <p class="card-text">Claude Sonnet 3.5 es un modelo de lenguaje avanzado de Anthropic disponible en Replit. Ofrece capacidades mejoradas de comprensión y generación de texto, ideal para asistencia de programación, generación de código y explicación de conceptos complejos.</p>
+                <a href="{{ url_for('claude') }}" class="btn btn-sm btn-outline-primary">Aprender más</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+                <div class="icon-card-header d-flex align-items-center mb-3">
+                    <i class="fas fa-code-branch fs-2 me-3 text-success"></i>
+                    <h3 class="card-title mb-0">Asistente de Replit</h3>
+                </div>
+                <p class="card-text">El Asistente de Replit es una herramienta integrada en el entorno de desarrollo que utiliza IA para ayudarte con tu código. Puede responder preguntas, depurar errores, explicar conceptos y generar código siguiendo tus instrucciones en lenguaje natural.</p>
+                <a href="{{ url_for('asistente') }}" class="btn btn-sm btn-outline-success">Aprender más</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="p-5 mb-5 bg-dark rounded-3 shadow">
+    <div class="container-fluid py-3">
+        <h2 class="display-6 fw-bold mb-4">¿Por qué usar IA en Replit?</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                    <i class="fas fa-bolt text-warning me-3 mt-1" style="font-size: 1.5rem;"></i>
+                    <div>
+                        <h5>Acelera tu programación</h5>
+                        <p>Genera código más rápido, obtén sugerencias en tiempo real y mejora tu productividad significativamente.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                    <i class="fas fa-lightbulb text-warning me-3 mt-1" style="font-size: 1.5rem;"></i>
+                    <div>
+                        <h5>Supera los bloqueos</h5>
+                        <p>Recibe ayuda instantánea cuando te encuentres atascado en un problema o necesites ideas frescas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                    <i class="fas fa-graduation-cap text-warning me-3 mt-1" style="font-size: 1.5rem;"></i>
+                    <div>
+                        <h5>Aprende mientras programas</h5>
+                        <p>Obtén explicaciones detalladas, ejemplos y mejores prácticas para mejorar tus habilidades continuamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="replit-section mb-5">
+    <div class="container-fluid py-3">
+        <div class="d-flex align-items-center mb-4">
+            <img src="{{ url_for('static', filename='images/replit-logo.svg') }}" alt="Replit Logo" class="me-3" width="40" height="40">
+            <h2 class="display-6 fw-bold mb-0">Desarrollado con Replit</h2>
+        </div>
+        
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="bg-dark bg-opacity-25 p-4 rounded-3 mb-4">
+                    <p class="lead mb-0">Esta aplicación ha sido creada usando las herramientas de desarrollo y la IA de Replit. Tanto el sitio web informativo como la aplicación de códigos QR fueron desarrollados a través de conversaciones iterativas con Claude Sonnet 3.5.</p>
+                </div>
+                
+                <div class="card border-0 bg-dark bg-opacity-25 mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title"><i class="fas fa-rocket me-2"></i> Beneficios de usar Replit + IA</h4>
+                        <div class="tech-sidebar mt-3">
+                            <ul class="tech-list">
+                                <li>Estructuración inteligente de código Python para la aplicación QRGB</li>
+                                <li>Diseño de interfaz con Kivy para la versión de escritorio</li>
+                                <li>Implementación optimizada de algoritmos para manipular capas RGB de QR</li>
+                                <li>Rendimiento mejorado en aplicaciones web</li>
+                                <li>Documentación automatizada y ejemplos ilustrativos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 text-center">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-center mb-4">
+                            <img src="{{ url_for('static', filename='images/replit-ai.svg') }}" alt="Replit AI" width="80" class="me-2">
+                        </div>
+                        <h3 class="card-title mb-3">Replit: Tu entorno de desarrollo todo en uno</h3>
+                        <p class="card-text">Replit es una plataforma colaborativa de programación en la nube que combina un editor de código, entorno de ejecución, hospedaje de aplicaciones y herramientas de IA para ayudarte a escribir mejor código más rápidamente.</p>
+                        
+                        <div class="row g-2 mt-4">
+                            <div class="col-6">
+                                <div class="feature-card p-3">
+                                    <i class="fas fa-code feature-icon"></i>
+                                    <h5>IDE en la nube</h5>
+                                    <p class="small mb-0">Accede a tu entorno de desarrollo desde cualquier dispositivo</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="feature-card p-3">
+                                    <i class="fas fa-robot feature-icon"></i>
+                                    <h5>Asistente IA</h5>
+                                    <p class="small mb-0">Potente asistente de IA integrado para ayudarte a programar</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="feature-card p-3">
+                                    <i class="fas fa-globe feature-icon"></i>
+                                    <h5>Despliegue</h5>
+                                    <p class="small mb-0">Publica tu aplicación con un click, sin configuraciones</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="feature-card p-3">
+                                    <i class="fas fa-users feature-icon"></i>
+                                    <h5>Colaborativo</h5>
+                                    <p class="small mb-0">Programa con amigos en tiempo real</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-grid mt-4">
+                            <a href="https://replit.com" class="btn btn-light btn-lg" target="_blank">
+                                <i class="fas fa-external-link-alt me-2"></i> Visitar Replit
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-lg-12 text-center">
+        <h2 class="mb-4">Revoluciona tu forma de programar</h2>
+        <p class="lead mb-5">Las herramientas de IA en Replit están transformando cómo los desarrolladores trabajan, aprenden y colaboran. Descubre cómo pueden potenciar tu flujo de trabajo.</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="https://github.com/ibarfedericoanderson" class="btn btn-lg btn-primary px-4" target="_blank">
+                <i class="fab fa-github me-2"></i>Perfil del Autor
+            </a>
+            <a href="{{ url_for('codigo') }}" class="btn btn-lg btn-success px-4">
+                <i class="fas fa-download me-2"></i>Descargar QRGB
+            </a>
+            <a href="{{ url_for('version_web') }}" class="btn btn-lg btn-warning px-4">
+                <i class="fas fa-globe me-2"></i>Versión GitHub
+            </a>
+            <a href="{{ url_for('comparacion') }}" class="btn btn-lg btn-outline-info px-4">Ver comparativa</a>
+            <a href="{{ url_for('recursos') }}" class="btn btn-lg btn-outline-light px-4">Recursos adicionales</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

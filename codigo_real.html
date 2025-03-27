@@ -1,0 +1,489 @@
+{% extends 'base.html' %}
+
+{% block title %}Código QRGB - Python{% endblock %}
+
+{% block content %}
+<div class="row mb-5">
+    <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-5 fw-bold mb-4">Código de la App QRGB</h1>
+        <p class="lead">Script Python desarrollado con asistencia de Claude Sonnet 3.5</p>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-lg-12">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title h4 mb-3">Descripción del proyecto</h2>
+                <p>Esta aplicación, desarrollada por el Ph.D. Ibar Federico Anderson con asistencia de la IA de Replit, permite generar códigos QR con colores personalizados. Utiliza las bibliotecas Kivy para la interfaz gráfica, PIL para manipulación de imágenes y qrcode para la generación de códigos QR.</p>
+                <p>El código está disponible como Open Source y puede ser adaptado para ejecutarse localmente en tu entorno de desarrollo.</p>
+                
+                <div class="alert alert-info">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-info-circle fa-2x me-3"></i>
+                        </div>
+                        <div>
+                            <h4 class="alert-heading">Enlaces del proyecto</h4>
+                            <p>Explora el proyecto completo en los siguientes enlaces:</p>
+                            <div class="d-grid gap-3">
+                                <a href="https://github.com/ibarfedericoanderson" class="btn btn-primary" target="_blank" style="background-color: #24292e; border-color: #24292e;">
+                                    <i class="fab fa-github me-2"></i><strong>Perfil del Autor en GitHub</strong>
+                                </a>
+                                <a href="{{ url_for('descargar_proyecto_completo') }}" class="btn btn-success" download style="background-color: #F26207; border-color: #F26207;">
+                                    <i class="fas fa-download me-2"></i><strong>Descargar proyecto completo (ZIP)</strong>
+                                </a>
+                                <a href="https://appqrgbpythonappapp-kz8zenrno2ybehz4zgkccc.streamlit.app/" class="btn text-white" target="_blank" style="background-color: #FF4B4B; border-color: #FF4B4B;">
+                                    <i class="fas fa-cloud-upload-alt me-2"></i><strong>Versión web en Streamlit Cloud</strong>
+                                </a>
+                                <a href="{{ url_for('version_web') }}" class="btn" style="background-color: #F7DF1E; border-color: #F7DF1E; color: #000;">
+                                    <i class="fas fa-globe me-2"></i><strong>Versión para GitHub Pages</strong>
+                                </a>
+                            </div>
+                            <hr class="my-3">
+                            <p>Enlaces adicionales:</p>
+                            <ul class="list-group">
+                                <li class="list-group-item bg-transparent border-0 ps-0">
+                                    <i class="fas fa-external-link-alt me-2 text-primary"></i>
+                                    <a href="https://federicoandersonar.wixsite.com/app-qrgb" class="text-decoration-none" target="_blank">Sitio web con información sobre la App</a>
+                                </li>
+                                <li class="list-group-item bg-transparent border-0 ps-0">
+                                    <i class="fab fa-github me-2 text-dark"></i>
+                                    <a href="https://github.com/ibarfedericoanderson/ScriptPythonAppQRGB" class="text-decoration-none" target="_blank">Repositorio del proyecto en GitHub</a>
+                                </li>
+                                <li class="list-group-item bg-transparent border-0 ps-0">
+                                    <i class="fas fa-code me-2 text-warning"></i>
+                                    <a href="https://github.com/ibarfedericoanderson/ScriptPythonAppQRGB/blob/main/QRGB.py" class="text-decoration-none" target="_blank">Ver script Python en GitHub</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-lg-12">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title h4 mb-3">Código fuente</h2>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3 class="mb-0"><i class="fas fa-code text-warning me-2"></i>Código fuente de QRGB con Kivy</h3>
+                    <div>
+                        <a href="{{ url_for('static', filename='QRGB.py') }}" download class="btn btn-sm btn-primary">
+                            <i class="fas fa-download me-1"></i> Descargar Python
+                        </a>
+                    </div>
+                </div>
+                
+                <div style="border-radius: 5px; box-shadow: 0 2px 15px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                    <!-- Barra superior estilo Carbon/VSCode -->
+                    <div style="background-color: #252525; padding: 8px 16px; border-top-left-radius: 5px; border-top-right-radius: 5px; display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; align-items: center;">
+                            <span style="display: inline-block; width: 12px; height: 12px; background-color: #FF5F56; border-radius: 50%; margin-right: 8px;"></span>
+                            <span style="display: inline-block; width: 12px; height: 12px; background-color: #FFBD2E; border-radius: 50%; margin-right: 8px;"></span>
+                            <span style="display: inline-block; width: 12px; height: 12px; background-color: #27C93F; border-radius: 50%; margin-right: 8px;"></span>
+                            <span style="color: #eee; font-size: 14px; margin-left: 12px;">QRGB.py</span>
+                        </div>
+                        <div>
+                            <span style="color: #888; font-size: 12px;">Python</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Contenido del código con estilo Carbon/VSCode - Versión simplificada -->
+                    <div style="background-color: #1E1E1E; color: #D4D4D4; font-family: 'Fira Code', monospace; padding: 16px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; overflow-x: auto; line-height: 1.5;">
+<pre style="margin: 0; line-height: 1.5; background: transparent; border: none; color: inherit; padding: 0;"><code style="display: block; white-space: pre;">
+from kivy.app import App
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.label import Label
+from kivy.uix.button import Button
+from kivy.uix.textinput import TextInput
+from kivy.uix.image import Image as KivyImage
+from kivy.core.window import Window
+from kivy.uix.popup import Popup
+from kivy.uix.filechooser import FileChooserIconView
+from kivy.uix.widget import Widget
+from PIL import Image
+import qrcode
+import os
+import cv2
+import webbrowser
+import logging
+import sys
+from pathlib import Path
+
+# Obtener la ruta base del ejecutable o script
+if getattr(sys, 'frozen', False):
+    # Si es un ejecutable
+    BASE_PATH = os.path.dirname(sys.executable)
+else:
+    # Si es el script Python
+    BASE_PATH = os.path.dirname(os.path.abspath(__file__))
+
+# Configurar carpetas
+FOLDER_PATH = os.path.join(BASE_PATH, 'qrgb_files')
+LOG_PATH = os.path.join(FOLDER_PATH, 'qrgb.log')
+
+# Crear directorios necesarios
+os.makedirs(FOLDER_PATH, exist_ok=True)
+
+# Configuración de logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(LOG_PATH),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger(__name__)
+
+def create_qr_with_logo(data, color, logo_path, qr_version=10, box_size=10):
+    qr = qrcode.QRCode(
+        version=qr_version,
+        error_correction=qrcode.constants.ERROR_CORRECT_H,
+        box_size=box_size,
+        border=4
+    )
+    qr.add_data(data)
+    qr.make(fit=True)
+
+    img = qr.make_image(fill_color=color, back_color="white").convert('RGBA')
+    
+    if not os.path.exists(logo_path):
+        raise FileNotFoundError(f"Logo file not found: {logo_path}")
+
+    logo = Image.open(logo_path).convert("RGBA")
+    basewidth = img.size[0] // 4
+    wpercent = (basewidth / float(logo.size[0]))
+    hsize = int((float(logo.size[1]) * float(wpercent)))
+    logo = logo.resize((basewidth, hsize), Image.LANCZOS)
+
+    pos = ((img.size[0] - logo.size[0]) // 2, (img.size[1] - logo.size[1]) // 2)
+    img.paste(logo, pos, logo)
+
+    return img
+
+def combine_qr_images(img1, img2, img3, logo_path):
+    size = img1.size
+    if img2.size != size or img3.size != size:
+        raise ValueError("All QR images must be the same size")
+
+    final_image = Image.new("RGBA", size, "black")
+
+    data_red = img1.getdata()
+    data_green = img2.getdata()
+    data_blue = img3.getdata()
+
+    new_data = []
+    for i in range(len(data_red)):
+        r1, g1, b1, a1 = data_red[i]
+        red_pixel = (r1, g1, b1) != (255, 255, 255)
+        r2, g2, b2, a2 = data_green[i]
+        green_pixel = (r2, g2, b2) != (255, 255, 255)
+        r3, g3, b3, a3 = data_blue[i]
+        blue_pixel = (r3, g3, b3) != (255, 255, 255)
+
+        if red_pixel and green_pixel and blue_pixel:
+            new_data.append((255, 255, 255, 255))
+        elif red_pixel and green_pixel:
+            new_data.append((255, 255, 0, 255))
+        elif red_pixel and blue_pixel:
+            new_data.append((255, 0, 255, 255))
+        elif green_pixel and blue_pixel:
+            new_data.append((0, 255, 255, 255))
+        elif red_pixel:
+            new_data.append((255, 0, 0, 255))
+        elif green_pixel:
+            new_data.append((0, 255, 0, 255))
+        elif blue_pixel:
+            new_data.append((0, 0, 255, 255))
+        else:
+            new_data.append((0, 0, 0, 255))
+
+    final_image.putdata(new_data)
+
+    # Aplicar logo al QR final
+    logo = Image.open(logo_path).convert("RGBA")
+    basewidth = final_image.size[0] // 4
+    wpercent = (basewidth / float(logo.size[0]))
+    hsize = int((float(logo.size[1]) * float(wpercent)))
+    logo = logo.resize((basewidth, hsize), Image.LANCZOS)
+
+    pos = ((final_image.size[0] - logo.size[0]) // 2, (final_image.size[1] - logo.size[1]) // 2)
+    final_image.paste(logo, pos, logo)
+
+    return final_image
+
+class MainMenu(BoxLayout):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.orientation = 'vertical'
+        self.padding = 10
+        self.spacing = 10
+        self.setup_ui()
+
+class QRGBApp(App):
+    def build(self):
+        return MainMenu()
+
+if __name__ == "__main__":
+    QRGBApp().run()
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-lg-12">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title h4 mb-3">Instrucciones para ejecutar localmente en VSCode</h2>
+                
+                <div class="mb-4">
+                    <h5>Requisitos previos</h5>
+                    <ol>
+                        <li>Tener Python instalado (versión 3.7 o superior)</li>
+                        <li>Tener VSCode instalado con la extensión de Python</li>
+                    </ol>
+                </div>
+                
+                <div class="mb-4">
+                    <h5>Instalación de dependencias</h5>
+                    <p>Ejecuta el siguiente comando en la terminal de VSCode para instalar las bibliotecas necesarias:</p>
+                    <div class="bg-dark p-3 rounded">
+                        <pre class="text-light mb-0"><code>pip install kivy pillow qrcode opencv-python</code></pre>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <h5>Pasos para ejecutar</h5>
+                    <ol>
+                        <li>Descarga el código desde el <a href="https://github.com/ibarfedericoanderson/ScriptPythonAppQRGB/blob/main/QRGB.py" target="_blank">repositorio en GitHub</a></li>
+                        <li>Abre VSCode y carga el archivo descargado</li>
+                        <li>Abre una terminal en VSCode (Terminal > New Terminal)</li>
+                        <li>Ejecuta el script con el comando: <code>python QRGB.py</code></li>
+                    </ol>
+                </div>
+                
+                <div class="alert alert-info">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-info-circle fa-2x me-3"></i>
+                        </div>
+                        <div>
+                            <h4 class="alert-heading">Desarrollado con Replit y Claude</h4>
+                            <p>Este código fue desarrollado con la asistencia de Claude Sonnet 3.5 en la plataforma Replit. A través de conversaciones interactivas, la IA ayudó a estructurar el código, implementar algoritmos para manipular las capas RGB de los códigos QR y crear una interfaz gráfica utilizando Kivy.</p>
+                            <p>Si encuentras problemas con la biblioteca Kivy, considera usar la versión web de la aplicación en Streamlit Cloud o consulta la documentación oficial de Kivy para solucionar problemas específicos de instalación según tu sistema operativo.</p>
+                            <p class="mb-0">También puedes adaptar el código para usar otra biblioteca de interfaz gráfica como tkinter, que viene preinstalada con Python.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-lg-12">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title h4 mb-3">Versión Streamlit (más sencilla de ejecutar)</h2>
+                <p>Si prefieres una versión más fácil de ejecutar localmente, puedes usar la versión Streamlit de la aplicación.</p>
+                
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3 class="mb-0"><i class="fas fa-stream text-danger me-2"></i>Script para Streamlit</h3>
+                    <div>
+                        <a href="{{ url_for('descargar_streamlit') }}" download class="btn btn-sm btn-danger">
+                            <i class="fas fa-download me-1"></i> Descargar Script Streamlit
+                        </a>
+                    </div>
+                </div>
+                
+                <div style="border-radius: 5px; box-shadow: 0 2px 15px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                    <!-- Barra superior estilo Carbon/VSCode -->
+                    <div style="background-color: #252525; padding: 8px 16px; border-top-left-radius: 5px; border-top-right-radius: 5px; display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; align-items: center;">
+                            <span style="display: inline-block; width: 12px; height: 12px; background-color: #FF5F56; border-radius: 50%; margin-right: 8px;"></span>
+                            <span style="display: inline-block; width: 12px; height: 12px; background-color: #FFBD2E; border-radius: 50%; margin-right: 8px;"></span>
+                            <span style="display: inline-block; width: 12px; height: 12px; background-color: #27C93F; border-radius: 50%; margin-right: 8px;"></span>
+                            <span style="color: #eee; font-size: 14px; margin-left: 12px;">app_qrgb_streamlit.py</span>
+                        </div>
+                        <div>
+                            <span style="color: #888; font-size: 12px;">Python</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Contenido del código con estilo Carbon/VSCode - Streamlit -->
+                    <div style="background-color: #1E1E1E; color: #D4D4D4; font-family: 'Fira Code', monospace; padding: 16px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; overflow-x: auto; line-height: 1.5;">
+<pre style="margin: 0; line-height: 1.5; background: transparent; border: none; color: inherit; padding: 0;"><code style="display: block; white-space: pre;">
+import streamlit as st
+import qrcode
+from PIL import Image
+import io
+import base64
+
+st.set_page_config(
+    page_title="QRGB - Generador de QR con datos en RGB",
+    page_icon="🌈",
+    layout="wide"
+)
+
+def generar_qr(texto, color_fondo, color_qr):
+    qr = qrcode.QRCode(
+        version=1,
+        error_correction=qrcode.constants.ERROR_CORRECT_H,
+        box_size=10,
+        border=4,
+    )
+    qr.add_data(texto)
+    qr.make(fit=True)
+    
+    img = qr.make_image(fill_color=color_qr, back_color=color_fondo)
+    return img
+
+def main():
+    st.title("📱 QRGB - Generador de Códigos QR")
+    st.write("### Creado por [Ibar Federico Anderson](https://github.com/ibarfedericoanderson)")
+    
+    st.markdown("""
+    Esta es una versión web simplificada de la aplicación QRGB.
+    Permite generar códigos QR personalizados con diferentes colores.
+    """)
+    
+    st.sidebar.header("Configuración")
+    
+    # Selector de pestaña
+    tab_seleccionada = st.sidebar.radio(
+        "Selecciona una opción:",
+        ["Generador de QR simple", "Acerca de"]
+    )
+    
+    if tab_seleccionada == "Generador de QR simple":
+        st.header("Generar código QR personalizado")
+        
+        # Entrada de texto
+        texto_qr = st.text_area("Ingresa el texto o URL para el código QR:", height=100)
+        
+        # Selección de colores
+        col1, col2 = st.columns(2)
+        with col1:
+            color_qr = st.color_picker("Color del QR:", "#000000")
+        with col2:
+            color_fondo = st.color_picker("Color de fondo:", "#FFFFFF")
+        
+        # Botón para generar
+        if st.button("Generar QR"):
+            if texto_qr:
+                with st.spinner("Generando QR..."):
+                    img = generar_qr(texto_qr, color_fondo, color_qr)
+                    
+                    # Mostrar imagen
+                    st.image(img, caption="Tu código QR personalizado", use_column_width=True)
+                    
+                    # Preparar imagen para descarga
+                    buf = io.BytesIO()
+                    img.save(buf, format='PNG')
+                    byte_im = buf.getvalue()
+                    
+                    # Botón de descarga
+                    btn = st.download_button(
+                        label="Descargar QR",
+                        data=byte_im,
+                        file_name="qr_code.png",
+                        mime="image/png"
+                    )
+            else:
+                st.error("Por favor, ingresa algún texto para generar el QR.")
+    
+    elif tab_seleccionada == "Acerca de":
+        st.header("Acerca de QRGB")
+        st.markdown("""
+        ## Aplicación QRGB completa
+        
+        La versión completa de esta aplicación permite:
+        
+        - Generar códigos QR que contienen 3 mensajes diferentes en las capas RGB
+        - Superponer los códigos para crear un QR a color
+        - Añadir un logo personalizado al centro del código QR
+        - Leer códigos QR RGB para extraer la información de cada capa
+        
+        ## Desarrollador
+        
+        Dr. Ibar Federico Anderson, Ph.D., Diseñador Industrial 
+        
+        - [Perfil de GitHub](https://github.com/ibarfedericoanderson)
+        - [Google Scholar](https://scholar.google.com/citations?user=mXD4RFUAAAAJ&hl=en)
+        - [ORCID](https://orcid.org/0000-0002-9732-3660)
+        
+        ## Tecnologías utilizadas
+        
+        - Python
+        - Streamlit
+        - qrcode
+        - Pillow (PIL)
+        - Claude Sonnet 3.5 en Replit para asistencia en el desarrollo
+        """)
+        
+        st.info("Esta aplicación fue desarrollada con asistencia de Claude Sonnet 3.5 en la plataforma Replit.")
+
+if __name__ == "__main__":
+    main()
+</code></pre>
+                    </div>
+                </div>
+                
+                <div class="alert alert-success">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-lightbulb fa-2x me-3"></i>
+                        </div>
+                        <div>
+                            <h4 class="alert-heading">Ejecutar la versión Streamlit</h4>
+                            <p>Para ejecutar la versión Streamlit localmente, sigue estos pasos:</p>
+                            <ol>
+                                <li>Instala Streamlit con: <code>pip install streamlit</code></li>
+                                <li>Descarga el script y guárdalo como <code>app_qrgb_streamlit.py</code></li> 
+                                <li>Abre una terminal y navega hasta la carpeta donde guardaste el archivo</li>
+                                <li>Ejecuta: <code>streamlit run app_qrgb_streamlit.py</code></li>
+                            </ol>
+                            <p class="mb-0">Tu navegador se abrirá automáticamente con la aplicación ejecutándose.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-grid gap-3 mt-4">
+                    <a href="https://appqrgbpythonappapp-kz8zenrno2ybehz4zgkccc.streamlit.app/" class="btn btn-danger btn-lg" target="_blank">
+                        <i class="fas fa-external-link-alt me-2"></i> Probar versión desplegada en Streamlit Cloud
+                    </a>
+                    <a href="{{ url_for('descargar_streamlit') }}" class="btn btn-outline-primary btn-lg" download>
+                        <i class="fas fa-download me-2"></i> Descargar script de Streamlit
+                    </a>
+                    <a href="{{ url_for('version_web') }}" class="btn btn-warning btn-lg">
+                        <i class="fas fa-globe me-2"></i> Ver versión web (GitHub Pages)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-lg-12 text-center">
+        <h2 class="mb-4">Explora más Recursos</h2>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="{{ url_for('recursos') }}" class="btn btn-lg btn-outline-light px-4">
+                <i class="fas fa-book me-2"></i>Recursos de Aprendizaje
+            </a>
+            <a href="https://github.com/ibarfedericoanderson" class="btn btn-lg btn-primary px-4" target="_blank">
+                <i class="fab fa-github me-2"></i>GitHub del Autor
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

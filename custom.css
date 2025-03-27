@@ -1,0 +1,201 @@
+/* Estilos personalizados para IA en Replit */
+
+/* Variables */
+:root {
+  --replit-orange: #F26207;
+  --replit-orange-light: #FF8A3D;
+  --replit-dark: #0E1525;
+  --replit-light: #F5F9FC;
+  --replit-primary: #3485e4;
+  --replit-accent: #FFC107;
+  --claude-purple: #8d69f1;
+  --streamlit-red: #FF4B4B;
+  --github-gray: #24292e;
+}
+
+/* Navbar personalizada */
+.navbar-custom {
+  background-color: var(--replit-dark);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.1);
+}
+
+/* Hero section */
+.hero-section {
+  background: linear-gradient(135deg, var(--replit-dark) 0%, #1a2332 100%);
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+  border-radius: 15px;
+  color: white;
+}
+
+/* Etiquetas de tecnologías */
+.tech-badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.tech-badge img {
+  vertical-align: text-bottom;
+  margin-right: 0.35rem;
+}
+
+.tech-badge.replit {
+  background-color: var(--replit-orange);
+  color: white;
+}
+
+.tech-badge.github {
+  background-color: var(--github-gray);
+  color: white;
+}
+
+.tech-badge.python {
+  background-color: #3776AB;
+  color: white;
+}
+
+.tech-badge.streamlit {
+  background-color: var(--streamlit-red);
+  color: white;
+}
+
+.tech-badge.ai {
+  background-color: var(--claude-purple);
+  color: white;
+}
+
+/* Tarjetas de características */
+.feature-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--replit-orange);
+}
+
+/* Efectos para imágenes */
+.img-shadow {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.img-zoom {
+  transition: transform 0.3s ease;
+}
+
+.img-zoom:hover {
+  transform: scale(1.03);
+}
+
+/* Animaciones para íconos */
+.animated-icon {
+  transition: all 0.3s ease;
+}
+
+.animated-icon:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Replit section */
+.replit-section {
+  background: linear-gradient(135deg, var(--replit-dark) 0%, #1a2334 100%);
+  padding: 3rem;
+  border-radius: 15px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.replit-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(242, 98, 7, 0.2) 0%, rgba(242, 98, 7, 0) 70%);
+  z-index: 0;
+}
+
+/* Footer personalizado */
+.footer {
+  background-color: var(--replit-dark);
+  color: white;
+  padding: 4rem 0 2rem;
+  margin-top: 5rem;
+}
+
+.footer-heading {
+  color: var(--replit-orange);
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--replit-orange);
+  text-decoration: none;
+}
+
+/* Sidebar técnica */
+.tech-sidebar {
+  border-left: 3px solid var(--replit-orange);
+  padding-left: 1.25rem;
+}
+
+.tech-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tech-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.tech-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--replit-orange);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+}

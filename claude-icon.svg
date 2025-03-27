@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Claude AI</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#6F4FEE" offset="0%"></stop>
+            <stop stop-color="#5436D6" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle fill="url(#linearGradient-1)" cx="50" cy="50" r="50"></circle>
+        <path d="M70,52 C70,62 61.5,70 50,70 C38.5,70 30,62 30,52 C30,42 38.5,35 50,35 C61.5,35 70,42 70,52 Z" fill="#FFFFFF" fill-rule="nonzero" opacity="0.9"></path>
+        <circle fill="#5436D6" cx="40" cy="52" r="5"></circle>
+        <circle fill="#5436D6" cx="60" cy="52" r="5"></circle>
+    </g>
+</svg>

@@ -1,0 +1,319 @@
+{% extends 'base.html' %}
+
+{% block title %}Claude Sonnet 3.5 en Replit{% endblock %}
+
+{% block content %}
+<div class="row mb-5">
+    <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-5 fw-bold mb-4">Claude Sonnet 3.5</h1>
+        <p class="lead">El modelo de inteligencia artificial avanzado de Anthropic integrado en Replit</p>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body">
+                <h2 class="card-title h4 mb-3">¿Qué es Claude Sonnet 3.5?</h2>
+                <p>Claude Sonnet 3.5 es un modelo de lenguaje de gran escala (LLM) desarrollado por Anthropic, ahora disponible en Replit. Es una versión especializada del modelo Claude, diseñada para ofrecer capacidades avanzadas de comprensión y generación de texto, con un enfoque particular en asistencia de programación.</p>
+                <p>El modelo ha sido entrenado con un vasto conjunto de datos textuales, incluyendo código y documentación técnica, lo que le permite comprender y generar código en múltiples lenguajes de programación con alta precisión.</p>
+                <p>Este potente modelo permite desplegar aplicaciones en diferentes plataformas como Streamlit Cloud y puede trabajar con código alojado en repositorios como GitHub, facilitando el desarrollo y despliegue de soluciones Open Source de manera gratuita.</p>
+            </div>
+        </div>
+        
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title h4 mb-3">Características principales</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-transparent">
+                        <i class="fas fa-code me-2 text-primary"></i>
+                        <strong>Generación avanzada de código:</strong> Puede escribir código funcional en múltiples lenguajes de programación.
+                    </li>
+                    <li class="list-group-item bg-transparent">
+                        <i class="fas fa-search me-2 text-primary"></i>
+                        <strong>Comprensión contextual mejorada:</strong> Entiende el contexto de tu proyecto y responde acorde a él.
+                    </li>
+                    <li class="list-group-item bg-transparent">
+                        <i class="fas fa-bug me-2 text-primary"></i>
+                        <strong>Depuración y resolución de problemas:</strong> Ayuda a identificar y corregir errores en tu código.
+                    </li>
+                    <li class="list-group-item bg-transparent">
+                        <i class="fas fa-book me-2 text-primary"></i>
+                        <strong>Explicaciones detalladas:</strong> Proporciona explicaciones claras de conceptos y procesos de programación.
+                    </li>
+                    <li class="list-group-item bg-transparent">
+                        <i class="fas fa-rocket me-2 text-primary"></i>
+                        <strong>Optimización de código:</strong> Sugiere mejoras para hacer tu código más eficiente y mantenible.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body">
+                <h2 class="card-title h4 mb-3">Capacidades técnicas</h2>
+                <div class="mb-4">
+                    <h5 class="h6">Lenguajes soportados</h5>
+                    <p>Claude Sonnet 3.5 puede trabajar con una amplia variedad de lenguajes de programación, incluyendo pero no limitado a:</p>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <span class="badge bg-secondary">Python</span>
+                        <span class="badge bg-secondary">JavaScript</span>
+                        <span class="badge bg-secondary">TypeScript</span>
+                        <span class="badge bg-secondary">HTML/CSS</span>
+                        <span class="badge bg-secondary">Java</span>
+                        <span class="badge bg-secondary">C/C++</span>
+                        <span class="badge bg-secondary">Ruby</span>
+                        <span class="badge bg-secondary">Go</span>
+                        <span class="badge bg-secondary">Rust</span>
+                        <span class="badge bg-secondary">PHP</span>
+                        <span class="badge bg-secondary">SQL</span>
+                        <span class="badge bg-secondary">Swift</span>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <h5 class="h6">Límites y contexto</h5>
+                    <p>Claude Sonnet 3.5 tiene una ventana de contexto amplia, lo que le permite comprender y mantener conversaciones largas y complejas. Puede mantener el contexto a lo largo de una conversación, recordando detalles y requisitos mencionados anteriormente.</p>
+                </div>
+                
+                <div>
+                    <h5 class="h6">Integración en Replit</h5>
+                    <p>En Replit, Claude Sonnet 3.5 está completamente integrado en la plataforma, lo que permite interacciones fluidas desde el editor de código. Puede acceder al código de tu Repl actual, proporcionando respuestas contextualizadas basadas en tu proyecto específico.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title h4 mb-3">Casos de uso</h2>
+                <div class="accordion" id="accordionCasosDeUso">
+                    <div class="accordion-item bg-transparent">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Generación de código
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionCasosDeUso">
+                            <div class="accordion-body">
+                                Crea funciones, clases y hasta aplicaciones completas basadas en tus descripciones. Desde algoritmos simples hasta arquitecturas de software complejas.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-transparent">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Explicación de código
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionCasosDeUso">
+                            <div class="accordion-body">
+                                Te ayuda a entender código complejo, bibliotecas o frameworks. Explica línea por línea qué hace un código y cómo funciona.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-transparent">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Refactorización y optimización
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionCasosDeUso">
+                            <div class="accordion-body">
+                                Mejora tu código existente haciéndolo más eficiente, legible y mantenible. Identifica oportunidades para optimizar algoritmos o estructuras de datos.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-transparent">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Aprendizaje y tutoriales
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionCasosDeUso">
+                            <div class="accordion-body">
+                                Aprende nuevos lenguajes, frameworks o conceptos de programación con explicaciones personalizadas y ejemplos prácticos adaptados a tu nivel de conocimiento.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm mb-5">
+    <div class="card-body p-4">
+        <h2 class="card-title h4 mb-4">Cómo utilizar Claude Sonnet 3.5 en Replit</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <div class="flex-shrink-0 me-3">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <span class="text-white fw-bold">1</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h5>Activa Claude en tu Repl</h5>
+                        <p>Abre el panel de IA en Replit haciendo clic en el icono de IA en la barra lateral o usando el atajo de teclado <kbd>Ctrl</kbd>+<kbd>I</kbd> (o <kbd>Cmd</kbd>+<kbd>I</kbd> en Mac).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <div class="flex-shrink-0 me-3">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <span class="text-white fw-bold">2</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h5>Selecciona Claude Sonnet 3.5</h5>
+                        <p>Asegúrate de que Claude Sonnet 3.5 está seleccionado como tu modelo de IA. Puede aparecer ya preseleccionado dependiendo de tu configuración.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <div class="flex-shrink-0 me-3">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <span class="text-white fw-bold">3</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h5>Escribe tu consulta</h5>
+                        <p>Formula tu pregunta o solicitud en el cuadro de texto. Puedes pedir generación de código, explicaciones, depuración o cualquier otra ayuda relacionada con programación.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <div class="flex-shrink-0 me-3">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <span class="text-white fw-bold">4</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h5>Interactúa y refina</h5>
+                        <p>Revisa la respuesta de Claude y haz preguntas de seguimiento para refinar o ampliar la información. Puedes mantener conversaciones largas para iterar sobre problemas complejos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="alert alert-info mb-5">
+    <div class="d-flex">
+        <div class="flex-shrink-0">
+            <i class="fas fa-info-circle fa-2x me-3"></i>
+        </div>
+        <div>
+            <h4 class="alert-heading">Consejo profesional</h4>
+            <p>Para obtener los mejores resultados con Claude Sonnet 3.5, sé específico en tus solicitudes. Proporciona contexto claro, ejemplos cuando sea posible, y especifica el formato y nivel de detalle que deseas en la respuesta.</p>
+            <p class="mb-0">Recuerda que puedes seleccionar código en tu editor y luego pedirle a Claude que lo explique, refactorice o amplie, ahorrándote tiempo de copiado y pegado.</p>
+        </div>
+    </div>
+</div>
+
+<div class="card bg-dark border-0 shadow-sm mb-5">
+    <div class="card-body p-4">
+        <h2 class="card-title h4 mb-4 text-center">Ejemplos de prompts efectivos para Claude Sonnet 3.5</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card bg-transparent border-secondary h-100">
+                    <div class="card-header border-secondary">
+                        <h5 class="card-title mb-0">Generación de código</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            "Crea una función en Python que reciba una lista de números y devuelva los tres números más grandes. La función debe manejar listas con elementos duplicados y listas con menos de tres elementos. Incluye comentarios explicativos y ejemplos de uso."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card bg-transparent border-secondary h-100">
+                    <div class="card-header border-secondary">
+                        <h5 class="card-title mb-0">Depuración de errores</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            "Estoy recibiendo un error 'TypeError: cannot convert dictionary update sequence element #0 to a sequence' en mi código Python. Aquí está la función que causa el problema. ¿Puedes explicar qué está mal y cómo solucionarlo?"
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card bg-transparent border-secondary h-100">
+                    <div class="card-header border-secondary">
+                        <h5 class="card-title mb-0">Explicación de concepto</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            "Explícame cómo funciona el patrón de diseño Observer en programación orientada a objetos. Incluye un ejemplo simple en JavaScript y cuándo debería usarlo en mis proyectos."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card bg-transparent border-secondary h-100">
+                    <div class="card-header border-secondary">
+                        <h5 class="card-title mb-0">Optimización de código</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            "Revisa esta función que calcula el número de Fibonacci y sugiere optimizaciones para mejorar su rendimiento. La función actual funciona pero es muy lenta para números grandes."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Caso de uso real -->
+<div class="card border-0 shadow-sm mb-5">
+    <div class="card-body p-4">
+        <h2 class="card-title h4 mb-4">Caso de uso real: Creación de App Open Source con Claude Sonnet 3.5</h2>
+        
+        <div class="row">
+            <div class="col-lg-12">
+                <p>El Ph.D., Master y Diseñador Industrial Ibar Federico Anderson ha utilizado Claude Sonnet 3.5 para crear y desplegar una aplicación de código abierto (Open Source) en la web de manera gratuita. Esta experiencia demuestra el potencial de las herramientas de IA de Replit para proyectos académicos y de desarrollo.</p>
+                
+                <div class="alert alert-primary">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-external-link-alt fa-2x me-3"></i>
+                        </div>
+                        <div>
+                            <h4 class="alert-heading">Enlaces al proyecto</h4>
+                            <p>Puedes explorar este proyecto a través de los siguientes recursos:</p>
+                            <ul>
+                                <li><a href="https://federicoandersonar.wixsite.com/app-qrgb" class="text-decoration-none" target="_blank">Sitio web con información sobre la App</a></li>
+                                <li><a href="https://osf.io/preprints/osf/g3ame_v1" class="text-decoration-none" target="_blank">Documento técnico en OSF</a></li>
+                                <li><a href="https://github.com/ibarfedericoanderson/ScriptPythonAppQRGB/blob/main/QRGB.py" class="text-decoration-none" target="_blank">Código fuente en GitHub</a></li>
+                                <li><a href="https://appqrgbpythonappapp-kz8zenrno2ybehz4zgkccc.streamlit.app/" class="text-decoration-none" target="_blank">Aplicación desplegada en Streamlit Cloud</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <h5 class="mt-4">Aspectos destacados del desarrollo</h5>
+                <p>El proyecto demuestra cómo utilizar Claude Sonnet 3.5 para:</p>
+                <ul>
+                    <li>Generar código Python para una aplicación funcional</li>
+                    <li>Iterar sobre el código con asistencia de IA</li>
+                    <li>Desplegar la aplicación en Streamlit Cloud</li>
+                    <li>Integrar el proyecto con servicios como GitHub para alojamiento del código</li>
+                    <li>Crear una solución completa sin costo utilizando servicios gratuitos</li>
+                </ul>
+                
+                <p class="mt-3">Este caso de uso ilustra cómo los desarrolladores, académicos y estudiantes pueden aprovechar las capacidades de Claude Sonnet 3.5 para llevar sus ideas desde el concepto hasta la implementación y despliegue, sin necesidad de grandes inversiones en infraestructura o herramientas de desarrollo.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

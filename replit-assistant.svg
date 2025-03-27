@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo circular -->
+  <circle cx="100" cy="100" r="90" fill="#0E1525"/>
+  
+  <!-- Hexágono exterior (cápsula del asistente) -->
+  <path d="M160 100C160 88.9543 154.627 78.7871 145.355 73L105.355 48.6603C101.376 46.2202 96.624 46.2202 92.6447 48.6603L52.6447 73C43.3728 78.7871 38 88.9543 38 100C38 111.046 43.3728 121.213 52.6447 127L92.6447 151.34C96.6243 153.78 101.376 153.78 105.355 151.34L145.355 127C154.627 121.213 160 111.046 160 100Z" fill="#F26207" stroke="white" stroke-width="3"/>
+  
+  <!-- Robot estilizado (asistente) -->
+  <rect x="70" y="80" width="60" height="60" rx="10" fill="#FFFFFF"/>
+  <circle cx="85" cy="95" r="5" fill="#0E1525"/>
+  <circle cx="115" cy="95" r="5" fill="#0E1525"/>
+  <path d="M85 115H115" stroke="#0E1525" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Antenas -->
+  <line x1="90" y1="80" x2="90" y2="70" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <line x1="110" y1="80" x2="110" y2="70" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="90" cy="65" r="5" fill="#FFFFFF"/>
+  <circle cx="110" cy="65" r="5" fill="#FFFFFF"/>
+  
+  <!-- Líneas de conectividad -->
+  <path d="M70 140C50 140 45 125 45 110" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="4 2"/>
+  <path d="M130 140C150 140 155 125 155 110" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="4 2"/>
+  
+  <!-- Símbolos de código -->
+  <path d="M60 55L50 65L60 75" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M140 55L150 65L140 75" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M120 45L100 85" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Texto "ASSISTANT" estilizado -->
+  <path d="M65 160H70L75 175H72L71 172H64L63 175H60L65 160ZM70 169L67.5 162L65 169H70Z" fill="white"/>
+  <path d="M76 160H79L83 169L87 160H90L84 175H82L76 160Z" fill="white"/>
+  <path d="M91 160H94L98 169L102 160H105L99 175H97L91 160Z" fill="white"/>
+  <path d="M106 160H109V175H106V160Z" fill="white"/>
+  <path d="M111 160H114V172H121V175H111V160Z" fill="white"/>
+  <path d="M123 160H126V172H133V175H123V160Z" fill="white"/>
+  <path d="M135 160H138V175H135V160Z" fill="white"/>
+  <path d="M140 160H151V163H143V166H150V169H143V172H151V175H140V160Z" fill="white"/>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo del logo de Streamlit -->
+  <rect width="200" height="200" rx="10" fill="#FF4B4B"/>
+  
+  <!-- Onda de Streamlit estilizada (simplificada) -->
+  <path d="M50 95C50 95 70 65 100 65C130 65 150 95 150 95C150 95 130 125 100 125C70 125 50 95 50 95Z" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M62 95C62 95 75 78 100 78C125 78 138 95 138 95C138 95 125 112 100 112C75 112 62 95 62 95Z" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M76 95C76 95 85 86 100 86C115 86 124 95 124 95C124 95 115 104 100 104C85 104 76 95 76 95Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Círculo central -->
+  <circle cx="100" cy="95" r="10" fill="white"/>
+  
+  <!-- Datos visualizados -->
+  <rect x="55" y="140" width="15" height="35" rx="2" fill="white"/>
+  <rect x="75" y="130" width="15" height="45" rx="2" fill="white"/>
+  <rect x="95" y="150" width="15" height="25" rx="2" fill="white"/>
+  <rect x="115" y="135" width="15" height="40" rx="2" fill="white"/>
+  <rect x="135" y="145" width="15" height="30" rx="2" fill="white"/>
+</svg>

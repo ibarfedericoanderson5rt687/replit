@@ -1,0 +1,82 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="400" fill="#f8f9fa" rx="15" ry="15"/>
+  
+  <!-- Browser Window -->
+  <rect x="50" y="50" width="500" height="300" fill="white" rx="8" ry="8" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- Browser Top Bar -->
+  <rect x="50" y="50" width="500" height="30" fill="#f1f3f5" rx="8" ry="8" stroke="#dee2e6" stroke-width="2"/>
+  <circle cx="70" cy="65" r="5" fill="#ff6b6b"/>
+  <circle cx="90" cy="65" r="5" fill="#ffd43b"/>
+  <circle cx="110" cy="65" r="5" fill="#69db7c"/>
+  <rect x="130" y="60" width="340" height="10" rx="5" ry="5" fill="#ced4da"/>
+  
+  <!-- App UI -->
+  <rect x="70" y="100" width="460" height="230" fill="white" rx="5" ry="5"/>
+  
+  <!-- Title -->
+  <text x="300" y="120" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#212529">Generador de Códigos QR</text>
+  
+  <!-- Form Elements -->
+  <rect x="100" y="140" width="200" height="24" fill="#e9ecef" rx="3" ry="3"/>
+  <text x="110" y="157" font-family="Arial" font-size="12" fill="#6c757d">Texto para el QR...</text>
+  
+  <!-- Color Selectors -->
+  <rect x="100" y="174" width="90" height="24" fill="#000000" rx="3" ry="3"/>
+  <rect x="210" y="174" width="90" height="24" fill="#ffffff" rx="3" ry="3" stroke="#dee2e6" stroke-width="1"/>
+  
+  <!-- Button -->
+  <rect x="100" y="208" width="200" height="30" fill="#0d6efd" rx="3" ry="3"/>
+  <text x="200" y="228" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Generar QR</text>
+  
+  <!-- QR Code Result -->
+  <rect x="330" y="140" width="160" height="160" fill="#f8f9fa" rx="3" ry="3"/>
+  
+  <!-- Simplified QR Code -->
+  <rect x="350" y="160" width="120" height="120" fill="white" stroke="#000000" stroke-width="2"/>
+  <rect x="370" y="180" width="80" height="80" fill="white"/>
+  
+  <!-- QR Code Pattern - Simplified representation -->
+  <rect x="370" y="180" width="10" height="10" fill="black"/>
+  <rect x="380" y="180" width="10" height="10" fill="black"/>
+  <rect x="390" y="180" width="10" height="10" fill="black"/>
+  <rect x="440" y="180" width="10" height="10" fill="black"/>
+  
+  <rect x="370" y="190" width="10" height="10" fill="black"/>
+  <rect x="440" y="190" width="10" height="10" fill="black"/>
+  
+  <rect x="370" y="200" width="10" height="10" fill="black"/>
+  <rect x="390" y="200" width="10" height="10" fill="black"/>
+  <rect x="400" y="200" width="10" height="10" fill="black"/>
+  <rect x="410" y="200" width="10" height="10" fill="black"/>
+  <rect x="440" y="200" width="10" height="10" fill="black"/>
+  
+  <rect x="370" y="210" width="10" height="10" fill="black"/>
+  <rect x="390" y="210" width="10" height="10" fill="black"/>
+  <rect x="410" y="210" width="10" height="10" fill="black"/>
+  <rect x="440" y="210" width="10" height="10" fill="black"/>
+  
+  <rect x="370" y="220" width="10" height="10" fill="black"/>
+  <rect x="390" y="220" width="10" height="10" fill="black"/>
+  <rect x="400" y="220" width="10" height="10" fill="black"/>
+  <rect x="410" y="220" width="10" height="10" fill="black"/>
+  <rect x="430" y="220" width="10" height="10" fill="black"/>
+  <rect x="440" y="220" width="10" height="10" fill="black"/>
+  
+  <rect x="370" y="230" width="10" height="10" fill="black"/>
+  <rect x="440" y="230" width="10" height="10" fill="black"/>
+  
+  <rect x="370" y="240" width="10" height="10" fill="black"/>
+  <rect x="380" y="240" width="10" height="10" fill="black"/>
+  <rect x="390" y="240" width="10" height="10" fill="black"/>
+  <rect x="400" y="240" width="10" height="10" fill="black"/>
+  <rect x="410" y="240" width="10" height="10" fill="black"/>
+  <rect x="420" y="240" width="10" height="10" fill="black"/>
+  <rect x="430" y="240" width="10" height="10" fill="black"/>
+  <rect x="440" y="240" width="10" height="10" fill="black"/>
+  
+  <!-- Download Button -->
+  <rect x="350" y="290" width="120" height="24" fill="#20c997" rx="3" ry="3"/>
+  <text x="410" y="306" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Descargar</text>
+</svg>

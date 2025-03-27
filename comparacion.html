@@ -1,0 +1,299 @@
+{% extends 'base.html' %}
+
+{% block title %}Comparación de herramientas de IA en Replit{% endblock %}
+
+{% block content %}
+<div class="row mb-5">
+    <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-5 fw-bold mb-4">Comparativa de herramientas de IA</h1>
+        <p class="lead">Análisis detallado entre Claude Sonnet 3.5 y el Asistente de Replit</p>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm mb-5">
+    <div class="card-body p-4">
+        <h2 class="card-title h4 mb-4">Tabla comparativa de características</h2>
+        
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Característica</th>
+                        <th scope="col">Claude Sonnet 3.5</th>
+                        <th scope="col">Asistente de Replit</th>
+                        <th scope="col">Notas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Tipo de herramienta</th>
+                        <td>Modelo de lenguaje grande (LLM)</td>
+                        <td>Interfaz integrada con IA</td>
+                        <td>El asistente puede utilizar Claude u otros modelos como motor</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Integración en IDE</th>
+                        <td>Panel lateral específico</td>
+                        <td>Integración nativa en el editor</td>
+                        <td>El asistente está más profundamente integrado en la experiencia de edición</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Proactividad</th>
+                        <td>Reactivo (basado en consultas)</td>
+                        <td>Proactivo y reactivo</td>
+                        <td>El asistente puede ofrecer sugerencias sin ser consultado</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Completado de código</th>
+                        <td>Manual (bajo petición)</td>
+                        <td>Automático mientras escribes</td>
+                        <td>El asistente ofrece sugerencias de completado en tiempo real</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Profundidad de respuestas</th>
+                        <td>Muy detalladas y personalizables</td>
+                        <td>Concisas y orientadas a la acción</td>
+                        <td>Claude es mejor para explicaciones extensas</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Memoria contextual</th>
+                        <td>Alta (mantiene conversaciones extensas)</td>
+                        <td>Moderada (enfocada en el contexto actual)</td>
+                        <td>Claude mantiene mejor el contexto de toda la conversación</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Generación de código</th>
+                        <td>Extensiva y personalizable</td>
+                        <td>Fragmentos y sugerencias</td>
+                        <td>Claude es superior para generar código completo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Explicación de conceptos</th>
+                        <td>Detallada con ejemplos</td>
+                        <td>Concisa y práctica</td>
+                        <td>Claude es mejor para tutoriales y explicaciones profundas</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Velocidad de respuesta</th>
+                        <td>Moderada (respuestas elaboradas)</td>
+                        <td>Rápida (respuestas cortas)</td>
+                        <td>El asistente prioriza la velocidad para mantener el flujo de trabajo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+                <h2 class="card-title h4 mb-3">¿Cuándo usar Claude Sonnet 3.5?</h2>
+                
+                <div class="mb-4">
+                    <h5 class="h6">Escenarios ideales</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent">
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            Cuando necesitas generar funciones o componentes de código complejos
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            Para obtener explicaciones detalladas de conceptos o algoritmos
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            Al refactorizar o analizar código existente en profundidad
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            Para conversaciones extensas sobre un problema complejo
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                            <i class="fas fa-check-circle text-primary me-2"></i>
+                            Cuando necesitas tutoriales paso a paso sobre tecnologías específicas
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="alert alert-primary">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-lightbulb me-2"></i>
+                        </div>
+                        <div>
+                            <p class="mb-0">Claude es ideal para tareas que requieren reflexión profunda, generación extensa de código y explicaciones detalladas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+                <h2 class="card-title h4 mb-3">¿Cuándo usar el Asistente de Replit?</h2>
+                
+                <div class="mb-4">
+                    <h5 class="h6">Escenarios ideales</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-transparent">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Para obtener ayuda rápida mientras escribes código
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Cuando necesitas autocompletado y sugerencias en tiempo real
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Para identificar y corregir errores simples rápidamente
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Cuando buscas referencias rápidas de sintaxis o funciones
+                        </li>
+                        <li class="list-group-item bg-transparent">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Para mantener el flujo de trabajo sin interrupciones
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="alert alert-success">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-lightbulb me-2"></i>
+                        </div>
+                        <div>
+                            <p class="mb-0">El Asistente es perfecto para asistencia rápida, sugerencias contextuales y ayuda mientras escribes, priorizando la velocidad y la integración.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm mb-5">
+    <div class="card-body p-4">
+        <h2 class="card-title h4 mb-4">Utilizando ambas herramientas en conjunto</h2>
+        
+        <p>Las herramientas de IA de Replit no son mutuamente excluyentes. De hecho, usarlas en combinación puede potenciar significativamente tu flujo de trabajo de programación. Aquí hay algunas estrategias para aprovechar lo mejor de ambas:</p>
+        
+        <div class="row g-4 mt-3">
+            <div class="col-md-6">
+                <div class="card bg-dark border-0 h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-code me-2 text-info"></i> Flujo de trabajo de desarrollo</h5>
+                        <ol class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent">Usa <strong>Claude</strong> para diseñar la estructura inicial y discutir la arquitectura</li>
+                            <li class="list-group-item bg-transparent">Durante la codificación, utiliza el <strong>Asistente</strong> para completado y sugerencias</li>
+                            <li class="list-group-item bg-transparent">Cuando te encuentres con problemas específicos, recurre a <strong>Claude</strong> para análisis detallados</li>
+                            <li class="list-group-item bg-transparent">Para refactorización y optimización, vuelve a <strong>Claude</strong> con fragmentos específicos</li>
+                            <li class="list-group-item bg-transparent">Utiliza el <strong>Asistente</strong> para correcciones rápidas y verificaciones durante todo el proceso</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card bg-dark border-0 h-100">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-graduation-cap me-2 text-warning"></i> Flujo de trabajo de aprendizaje</h5>
+                        <ol class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent">Usa <strong>Claude</strong> para obtener explicaciones detalladas de nuevos conceptos</li>
+                            <li class="list-group-item bg-transparent">Practica escribiendo código con la ayuda del <strong>Asistente</strong> para sugerencias</li>
+                            <li class="list-group-item bg-transparent">Cuando tengas dudas específicas, consulta rápidamente al <strong>Asistente</strong></li>
+                            <li class="list-group-item bg-transparent">Para revisiones de código y mejores prácticas, recurre a <strong>Claude</strong></li>
+                            <li class="list-group-item bg-transparent">Utiliza <strong>Claude</strong> para generar ejercicios y desafíos personalizados</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+                <h2 class="card-title h4 mb-4">Casos de estudio: Escenarios comparativos</h2>
+                
+                <div class="row g-4">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 bg-transparent border-secondary">
+                            <div class="card-header bg-transparent border-secondary">
+                                <h5 class="card-title mb-0">Desarrollo de una API REST</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="mb-3">Con Claude:</h6>
+                                <p>Pídele que diseñe la estructura completa de la API, incluyendo endpoints, modelos de datos y lógica de negocio. Claude puede generar el esqueleto completo del proyecto y explicar cada componente.</p>
+                                
+                                <h6 class="mb-3">Con el Asistente:</h6>
+                                <p>Durante la implementación, utiliza el asistente para completar funciones específicas, resolver errores de sintaxis y obtener referencias rápidas de los métodos HTTP.</p>
+                                
+                                <h6 class="text-info mt-3">Mejor opción:</h6>
+                                <p>Comienza con <strong>Claude</strong> para el diseño y estructura, luego alterna al <strong>Asistente</strong> durante la codificación.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 bg-transparent border-secondary">
+                            <div class="card-header bg-transparent border-secondary">
+                                <h5 class="card-title mb-0">Depuración de un bug complejo</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="mb-3">Con Claude:</h6>
+                                <p>Comparte el código problemático y el error. Claude puede realizar un análisis profundo, identificar causas raíz no obvias y sugerir soluciones con explicaciones detalladas del problema.</p>
+                                
+                                <h6 class="mb-3">Con el Asistente:</h6>
+                                <p>A medida que implementas las soluciones, el asistente puede señalar errores sintácticos adicionales o sugerir mejoras incrementales mientras escribes.</p>
+                                
+                                <h6 class="text-info mt-3">Mejor opción:</h6>
+                                <p><strong>Claude</strong> para el diagnóstico inicial y análisis profundo, <strong>Asistente</strong> para implementación y verificación de la solución.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 bg-transparent border-secondary">
+                            <div class="card-header bg-transparent border-secondary">
+                                <h5 class="card-title mb-0">Aprendiendo un nuevo framework</h5>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="mb-3">Con Claude:</h6>
+                                <p>Solicita un tutorial completo sobre el framework, con explicaciones conceptuales y ejemplos prácticos. Claude puede generar una guía estructurada con código de ejemplo extenso.</p>
+                                
+                                <h6 class="mb-3">Con el Asistente:</h6>
+                                <p>Mientras implementas lo aprendido, el asistente te ayudará con la sintaxis específica, autocompletado de métodos y mensajes de error que encuentres.</p>
+                                
+                                <h6 class="text-info mt-3">Mejor opción:</h6>
+                                <p>Inicia con <strong>Claude</strong> para obtener una comprensión sólida, luego utiliza el <strong>Asistente</strong> durante la práctica y experimentación.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="alert alert-info mb-5">
+    <div class="d-flex">
+        <div class="flex-shrink-0">
+            <i class="fas fa-info-circle fa-2x me-3"></i>
+        </div>
+        <div>
+            <h4 class="alert-heading">Recomendación final</h4>
+            <p>La forma más efectiva de utilizar las herramientas de IA en Replit es mediante un enfoque híbrido:</p>
+            <ul>
+                <li>Utiliza <strong>Claude Sonnet 3.5</strong> para tareas que requieren razonamiento profundo, generación de código complejo y explicaciones detalladas.</li>
+                <li>Aprovecha el <strong>Asistente de Replit</strong> para apoyo constante durante el proceso de codificación, autocompletado y resolución de problemas rápidos.</li>
+            </ul>
+            <p class="mb-0">Con el tiempo, desarrollarás un instinto sobre qué herramienta es más adecuada para cada situación específica en tu flujo de trabajo.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

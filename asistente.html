@@ -1,0 +1,344 @@
+{% extends 'base.html' %}
+
+{% block title %}Asistente de IA en Replit{% endblock %}
+
+{% block content %}
+<div class="row mb-5">
+    <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-5 fw-bold mb-4">Asistente de Replit</h1>
+        <p class="lead">Una herramienta de IA integrada para mejorar tu experiencia de programación</p>
+    </div>
+</div>
+
+<div class="row mb-5">
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body">
+                <h2 class="card-title h4 mb-3">¿Qué es el Asistente de Replit?</h2>
+                <p>El Asistente de Replit es una herramienta de inteligencia artificial integrada directamente en el entorno de desarrollo de Replit. Está diseñado para proporcionar ayuda contextual y asistencia en tiempo real mientras programas.</p>
+                <p>Este asistente utiliza modelos de IA avanzados (incluyendo Claude) para entender tu código, responder preguntas, ofrecer sugerencias y ayudarte a resolver problemas de programación sin tener que salir de tu entorno de trabajo.</p>
+                <p>Mientras que Claude Sonnet 3.5 es un modelo específico de Anthropic, el Asistente de Replit es una interfaz integrada que puede aprovechar diferentes modelos de IA para facilitar tu experiencia de programación.</p>
+            </div>
+        </div>
+        
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title h4 mb-3">Características principales</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-transparent">
+                        <i class="fas fa-comments me-2 text-success"></i>
+                        <strong>Interfaz de chat integrada:</strong> Interactúa directamente desde el editor sin cambiar de contexto.
+                    </li>
+                    <li class="list-group-item bg-transparent">
+                        <i class="fas fa-project-diagram me-2 text-success"></i>
+                        <strong>Conciencia contextual:</strong> Comprende el contexto de tu proyecto y código actual.
+                    </li>
+                    <li class="list-group-item bg-transparent">
+                        <i class="fas fa-magic me-2 text-success"></i>
+                        <strong>Completado de código:</strong> Sugerencias inteligentes mientras escribes.
+                    </li>
+                    <li class="list-group-item bg-transparent">
+                        <i class="fas fa-lightbulb me-2 text-success"></i>
+                        <strong>Sugerencias proactivas:</strong> Ofrece mejoras y detecta posibles problemas en tu código.
+                    </li>
+                    <li class="list-group-item bg-transparent">
+                        <i class="fas fa-question-circle me-2 text-success"></i>
+                        <strong>Respuestas a consultas:</strong> Explica conceptos y resuelve dudas sobre programación.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body">
+                <h2 class="card-title h4 mb-3">Diferencias con Claude</h2>
+                <p>Mientras que Claude Sonnet 3.5 es un modelo de IA específico, el Asistente de Replit es una interfaz integrada que puede utilizar diferentes modelos de IA (incluyendo Claude) para proporcionar asistencia.</p>
+                
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Característica</th>
+                                <th scope="col">Asistente de Replit</th>
+                                <th scope="col">Claude Sonnet 3.5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Integración en el IDE</td>
+                                <td><i class="fas fa-check-circle text-success"></i> Nativa</td>
+                                <td><i class="fas fa-check-circle text-success"></i> A través del panel</td>
+                            </tr>
+                            <tr>
+                                <td>Sugerencias automáticas</td>
+                                <td><i class="fas fa-check-circle text-success"></i></td>
+                                <td><i class="fas fa-times-circle text-danger"></i> Requiere consulta</td>
+                            </tr>
+                            <tr>
+                                <td>Completado de código</td>
+                                <td><i class="fas fa-check-circle text-success"></i></td>
+                                <td><i class="fas fa-check-circle text-success"></i> Mediante solicitud</td>
+                            </tr>
+                            <tr>
+                                <td>Conversaciones extensas</td>
+                                <td><i class="fas fa-times-circle text-danger"></i> Limitado</td>
+                                <td><i class="fas fa-check-circle text-success"></i> Avanzado</td>
+                            </tr>
+                            <tr>
+                                <td>Profundidad de respuestas</td>
+                                <td><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></td>
+                                <td><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i><i class="fas fa-star text-warning"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-sm">
+            <div class="card-body">
+                <h2 class="card-title h4 mb-3">Beneficios del Asistente</h2>
+                <div class="accordion" id="accordionBeneficios">
+                    <div class="accordion-item bg-transparent">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#benefitOne" aria-expanded="true" aria-controls="benefitOne">
+                                Productividad mejorada
+                            </button>
+                        </h2>
+                        <div id="benefitOne" class="accordion-collapse collapse show" data-bs-parent="#accordionBeneficios">
+                            <div class="accordion-body">
+                                Reduce el tiempo dedicado a buscar soluciones en Google o Stack Overflow. El asistente te proporciona respuestas contextuales inmediatas, permitiéndote mantener el flujo de trabajo sin interrupciones.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-transparent">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#benefitTwo" aria-expanded="false" aria-controls="benefitTwo">
+                                Ayuda para principiantes
+                            </button>
+                        </h2>
+                        <div id="benefitTwo" class="accordion-collapse collapse" data-bs-parent="#accordionBeneficios">
+                            <div class="accordion-body">
+                                Ideal para estudiantes y programadores novatos que necesitan orientación constante. El asistente explica conceptos, proporciona ejemplos relevantes y ayuda a entender errores comunes.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-transparent">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#benefitThree" aria-expanded="false" aria-controls="benefitThree">
+                                Depuración inteligente
+                            </button>
+                        </h2>
+                        <div id="benefitThree" class="accordion-collapse collapse" data-bs-parent="#accordionBeneficios">
+                            <div class="accordion-body">
+                                Identifica y sugiere soluciones para errores en tu código. El asistente puede analizar mensajes de error y proponer correcciones específicas para resolver problemas rápidamente.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-transparent">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#benefitFour" aria-expanded="false" aria-controls="benefitFour">
+                                Aprendizaje continuo
+                            </button>
+                        </h2>
+                        <div id="benefitFour" class="accordion-collapse collapse" data-bs-parent="#accordionBeneficios">
+                            <div class="accordion-body">
+                                Mejora tus habilidades mientras programas. El asistente no solo resuelve problemas, sino que también explica el razonamiento detrás de las soluciones, ayudándote a aprender mejores prácticas.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm mb-5">
+    <div class="card-body p-4">
+        <h2 class="card-title h4 mb-4">Cómo utilizar el Asistente de Replit</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <div class="flex-shrink-0 me-3">
+                        <div class="bg-success rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <span class="text-white fw-bold">1</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h5>Accede al Asistente</h5>
+                        <p>Haz clic en el icono del Asistente en la barra lateral del editor (generalmente representado por un icono de chat o robot), o usa el atajo de teclado <kbd>Alt</kbd>+<kbd>/</kbd>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <div class="flex-shrink-0 me-3">
+                        <div class="bg-success rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <span class="text-white fw-bold">2</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h5>Haz preguntas directas</h5>
+                        <p>Escribe tu pregunta o solicitud en el cuadro de chat. Puedes preguntar sobre el código que estás escribiendo, pedir ejemplos o solicitar explicaciones.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <div class="flex-shrink-0 me-3">
+                        <div class="bg-success rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <span class="text-white fw-bold">3</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h5>Utiliza las sugerencias automáticas</h5>
+                        <p>El asistente puede ofrecer sugerencias mientras escribes código. Estas aparecerán como pequeñas notificaciones o directamente en el editor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex">
+                    <div class="flex-shrink-0 me-3">
+                        <div class="bg-success rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <span class="text-white fw-bold">4</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h5>Completado de código</h5>
+                        <p>Cuando estés escribiendo, el asistente puede sugerir completados de código. Presiona <kbd>Tab</kbd> o <kbd>Enter</kbd> para aceptar las sugerencias que te resulten útiles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="alert alert-success mb-5">
+    <div class="d-flex">
+        <div class="flex-shrink-0">
+            <i class="fas fa-lightbulb fa-2x me-3"></i>
+        </div>
+        <div>
+            <h4 class="alert-heading">Consejo para usuarios</h4>
+            <p>El Asistente de Replit puede utilizarse junto con Claude para obtener una experiencia de programación más completa. Usa el Asistente para ayuda rápida y sugerencias mientras escribes, y Claude para conversaciones más profundas o explicaciones detalladas sobre problemas complejos.</p>
+            <p class="mb-0">Experimenta con ambas herramientas para descubrir cuál se adapta mejor a diferentes situaciones en tu flujo de trabajo.</p>
+        </div>
+    </div>
+</div>
+
+<div class="card bg-dark border-0 shadow-sm mb-5">
+    <div class="card-body p-4">
+        <h2 class="card-title h4 mb-4 text-center">Ejemplos de uso del Asistente de Replit</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card bg-transparent border-secondary h-100">
+                    <div class="card-header border-secondary">
+                        <h5 class="card-title mb-0">Consulta rápida de sintaxis</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            "¿Cómo se declara una variable constante en JavaScript?"
+                        </p>
+                        <hr>
+                        <p class="card-text text-muted">
+                            <small>El asistente responderá con una explicación breve y un ejemplo práctico:</small>
+                        </p>
+                        <div class="bg-secondary bg-opacity-25 p-2 rounded">
+                            <code>const miVariable = valor;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card bg-transparent border-secondary h-100">
+                    <div class="card-header border-secondary">
+                        <h5 class="card-title mb-0">Ayuda con errores</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            "¿Por qué estoy recibiendo este error de 'undefined is not a function'?"
+                        </p>
+                        <hr>
+                        <p class="card-text text-muted">
+                            <small>El asistente analizará tu código actual y explicará la causa probable del error, como intentar llamar a un método en una variable que no está definida o es de un tipo diferente al esperado.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card bg-transparent border-secondary h-100">
+                    <div class="card-header border-secondary">
+                        <h5 class="card-title mb-0">Completado de código</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Al escribir <code>function ordenarArray(</code> el asistente puede sugerir automáticamente:
+                        </p>
+                        <hr>
+                        <div class="bg-secondary bg-opacity-25 p-2 rounded">
+                            <code>function ordenarArray(array) {<br>&nbsp;&nbsp;return array.sort((a, b) => a - b);<br>}</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card bg-transparent border-secondary h-100">
+                    <div class="card-header border-secondary">
+                        <h5 class="card-title mb-0">Sugerencia proactiva</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Si escribes un bucle que podría ser ineficiente, el asistente podría sugerir:
+                        </p>
+                        <hr>
+                        <p class="card-text text-muted">
+                            <small>"Considera usar el método .map() en lugar de este bucle for para transformar el array. Esto hará tu código más legible y funcional."</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Experiencia personal con el Asistente de Replit -->
+<div class="card border-0 shadow-sm mb-5">
+    <div class="card-body p-4">
+        <h2 class="card-title h4 mb-4">Experiencia personal: Desarrollo de aplicación con el Asistente de Replit</h2>
+        
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="alert alert-secondary">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-comment-alt fa-2x me-3"></i>
+                        </div>
+                        <div>
+                            <h4 class="alert-heading">Testimonio</h4>
+                            <p class="fst-italic">"Como Ph.D., Master y Diseñador Industrial, he utilizado el Asistente de Replit junto con Claude en diversos proyectos. La combinación de ambas herramientas ha sido fundamental para desarrollar aplicaciones web y soluciones de código abierto de manera eficiente."</p>
+                            <p class="fst-italic">"El Asistente me ha ayudado con sugerencias rápidas de código y resolución de errores durante el desarrollo, mientras que Claude me ha permitido explorar conceptos más complejos y realizar consultas detalladas sobre la implementación."</p>
+                            <footer class="blockquote-footer">Ibar Federico Anderson</footer>
+                        </div>
+                    </div>
+                </div>
+                
+                <h5 class="mt-4">Ventajas del Asistente para el desarrollo académico</h5>
+                <p>Durante mi experiencia utilizando el Asistente de Replit para proyectos de investigación y desarrollo académico, he observado las siguientes ventajas:</p>
+                <ul>
+                    <li>Agiliza el proceso de codificación con sugerencias contextuales</li>
+                    <li>Reduce la curva de aprendizaje para nuevas tecnologías</li>
+                    <li>Facilita la documentación del código con comentarios claros</li>
+                    <li>Permite iterar más rápidamente sobre prototipos y pruebas de concepto</li>
+                    <li>Mejora la calidad del código con recomendaciones de buenas prácticas</li>
+                </ul>
+                
+                <p class="mt-3">Esta herramienta ha demostrado ser particularmente útil para investigadores y académicos que necesitan desarrollar aplicaciones para validar sus hipótesis o presentar sus resultados, sin necesidad de ser expertos en programación.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,6 @@
+flask
+gunicorn
+email-validator
+flask-sqlalchemy
+pillow
+qrcode

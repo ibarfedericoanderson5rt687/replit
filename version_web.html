@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %}Versión Web de QRGB{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h1 class="display-5 text-center mb-4">Versión Web de QRGB</h1>
+                    
+                    <div class="alert alert-info mb-4">
+                        <h3 class="h5"><i class="fas fa-info-circle me-2"></i> Información importante</h3>
+                        <p>Esta versión de QRGB está optimizada para ejecutarse directamente en un navegador web, 
+                        lo que la hace perfecta para alojarla en GitHub Pages u otros servicios de hosting estático.</p>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <div class="card bg-light h-100">
+                                <div class="card-body">
+                                    <h3 class="h5 text-center mb-3">Características</h3>
+                                    <ul class="text-start">
+                                        <li>Generación de códigos QR individuales</li>
+                                        <li>Personalización de colores</li>
+                                        <li>Compatible con cualquier navegador moderno</li>
+                                        <li>No requiere instalación de Python</li>
+                                        <li>Totalmente basada en JavaScript</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card bg-light h-100">
+                                <div class="card-body">
+                                    <h3 class="h5 text-center mb-3">Instrucciones</h3>
+                                    <ol class="text-start">
+                                        <li>Descarga el archivo ZIP con el código fuente</li>
+                                        <li>Descomprime el archivo en tu computadora</li>
+                                        <li>Sube los archivos a tu repositorio de GitHub</li>
+                                        <li>Activa GitHub Pages en tu repositorio</li>
+                                        <li>¡Tu aplicación estará disponible en segundos!</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="d-flex justify-content-center align-items-center mb-4">
+                            <img src="{{ url_for('static', filename='images/github-pages.svg') }}" alt="GitHub Pages" width="100" class="me-3 animated-icon">
+                            <img src="{{ url_for('static', filename='images/qrgb_web_preview.png') }}" alt="Vista previa de QRGB versión web" class="img-fluid rounded img-shadow img-zoom" style="max-width: 500px;">
+                        </div>
+                    </div>
+
+                    <div class="alert alert-success mb-4">
+                        <h3 class="h5"><i class="fas fa-lightbulb me-2"></i> ¿Por qué usar la versión web?</h3>
+                        <p>La versión web es ideal para compartir rápidamente tu generador de códigos QR con otras personas sin necesidad de que instalen nada. 
+                        Además, al alojarla en GitHub Pages, tendrás un URL permanente que podrás compartir fácilmente.</p>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <a href="{{ url_for('descargar_version_web') }}" class="btn btn-primary btn-lg">
+                            <i class="fas fa-download me-2"></i> Descargar versión web (.zip)
+                        </a>
+                        <a href="https://github.com/ibarfedericoanderson/ScriptPythonAppQRGB" target="_blank" class="btn btn-outline-dark">
+                            <i class="fab fa-github me-2"></i> Ver repositorio en GitHub
+                        </a>
+                    </div>
+
+                    <div class="mt-4">
+                        <p class="text-muted text-center">
+                            <small>Desarrollado por <a href="https://github.com/ibarfedericoanderson" target="_blank">Ibar Federico Anderson</a> con la asistencia de Replit (Claude Sonnet 3.5)</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
